@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div th:insert="navbar.html"></div>
+<div class="container">
+    <div class="row">
+        <h1>List vehicles</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <a th:href="@{/vehicles/new}" class="btn btn-primary btn-sm mb-3">Add Vehicle</a>
+        </div>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Plate</th>
+            <th>Inspection</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vehicle: ${vehicles}">
+            <td th:text="${vehicle.brand}"></td>
+            <td th:text="${vehicle.model}"></td>
+            <td th:text="${vehicle.plate}"></td>
+            <td th:text="${vehicle.inspection}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

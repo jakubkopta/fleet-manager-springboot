@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div th:insert="navbar.html"></div>
+<div class="container">
+    <div class="row">
+        <h1>List fuels</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <a th:href="@{/fuels/new}" class="btn btn-primary btn-sm mb-3">Add Fuel</a>
+        </div>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Mileage</th>
+            <th>Cost</th>
+            <th>Day</th>
+            <th>Vehicle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="fuel: ${fuels}">
+            <td th:text="${fuel.mileage}"></td>
+            <td th:text="${fuel.cost}"></td>
+            <td th:text="${fuel.day}"></td>
+            <td th:text="${{fuel.vehicle?.plate}}"/></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
