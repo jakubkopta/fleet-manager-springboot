@@ -1,13 +1,10 @@
 package com.project.web;
 
-import com.project.logic.VehicleService;
+import com.project.service.VehicleService;
 import com.project.model.Vehicle;
-import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("/vehicles")

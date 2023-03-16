@@ -1,7 +1,7 @@
 package com.project.web;
 
-import com.project.logic.FuelService;
-import com.project.logic.VehicleService;
+import com.project.service.FuelService;
+import com.project.service.VehicleService;
 import com.project.model.Fuel;
 import com.project.model.Vehicle;
 import org.springframework.stereotype.Controller;

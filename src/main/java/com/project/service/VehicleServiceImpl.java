@@ -1,4 +1,4 @@
-package com.project.logic;
+package com.project.service;
 
 import com.project.model.Vehicle;
 import com.project.model.VehicleRepository;

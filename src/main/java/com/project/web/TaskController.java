@@ -1,6 +1,6 @@
 package com.project.web;
 
-import com.project.logic.TaskService;
+import com.project.service.TaskService;
 import com.project.model.Task;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

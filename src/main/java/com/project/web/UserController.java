@@ -1,6 +1,6 @@
 package com.project.web;
 
-import com.project.logic.UserService;
+import com.project.service.UserService;
 import com.project.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

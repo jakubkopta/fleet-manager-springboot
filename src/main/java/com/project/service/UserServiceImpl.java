@@ -1,4 +1,4 @@
-package com.project.logic;
+package com.project.service;
 
 import com.project.model.User;
 import com.project.model.UserRepository;
@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
